@@ -16,8 +16,8 @@ export const useCheckAuth = () => {
             // si no hay usuario coloca estado logout
             if( !user ) return dispatch( logout() );
             // si existe usuario- logeo
-            const { uid, email, displayName, photoUrl } = user;
-            dispatch( login({ uid, email, displayName, photoUrl }) );
+            const { uid, email, displayName, photoURL } = user;
+            dispatch( login({ uid, email, displayName, photoURL }) );
             // cargo las notas del usuario
             dispatch( startLoadingNotes() );
         });

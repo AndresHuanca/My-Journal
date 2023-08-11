@@ -9,22 +9,24 @@ export const AppRouter = () => {
     
     // Custom hook
     const status = useCheckAuth();
+    console.log({status})
     
     if( status ==='checking' ) {
         return <CheckingAuth />
     }
-
+    console.log({status})
     return (
         <>
             <Routes >
                 {/* Proteción de rutas si estoy autenticado */}
                 {
+                    
                     ( status === 'authenticated')
                     ? <Route path="/*" element={ <JournalRoutes /> }/>      
-                    : <Route path="/auth/*" element={ <AuthRoutes /> }/>
+                    : <Route path="/*" element={ <AuthRoutes /> }/>
                 }     
 
-                <Route path="/*" element={ <Navigate to="/auth/login" /> } />
+                <Route path="/*" element={ <Navigate to="/login" /> } />
                 
 
                 {/* Login-register */}

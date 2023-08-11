@@ -7,4 +7,6 @@ export const store = configureStore({
         auth: authSlice.reducer,
         journal:journalSlice.reducer,
     },
+    // Para que no funcione las devtools en producción
+    // devTools: false
 });
