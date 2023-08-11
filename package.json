@@ -2,7 +2,6 @@
   "name": "journal-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://andreshuanca.github.io/My-Journal",
   "type": "module",
   "scripts": {
     "dev": "vite",
